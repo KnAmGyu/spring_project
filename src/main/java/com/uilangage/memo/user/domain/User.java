@@ -1,5 +1,4 @@
 package com.uilangage.memo.user.domain;
-
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -15,14 +14,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+
+
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder(toBuilder=true)
+@Builder
 @Getter
 @Table(name="user")
 @Entity
 public class User {
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
@@ -40,6 +41,5 @@ public class User {
 	@UpdateTimestamp
 	@Column(name="updatedAt")
 	private Date updatedAt;
-	
-	
+
 }
