@@ -35,6 +35,7 @@
 		$(document).ready(function(){
 			
 			$("#joinBtn").on("click",function(){
+				
 				let loginId = $("#loginIdinput").val();
 				let password = $("#passwordIdinput").val();
 				let passwordConfirm = $("#passwordConfirmIdinput").val();
