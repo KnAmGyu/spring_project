@@ -37,10 +37,10 @@
 			$("#joinBtn").on("click",function(){
 				
 				let loginId = $("#loginIdinput").val();
-				let password = $("#passwordIdinput").val();
-				let passwordConfirm = $("#passwordConfirmIdinput").val();
-				let name = $("#nameIdinput").val();
-				let email = $("#emailIdinput").val();
+				let password = $("#passwordInput").val();
+				let passwordConfirm = $("#passwordConfirmInput").val();
+				let name = $("#nameInput").val();
+				let email = $("#emailInput").val();
 				
 				if(loginId == ""){
 					alert("아이디를 입력하세요");
@@ -66,23 +66,23 @@
 					return;
 				}
 				
-				$.ajax({
-					type:"post"
-					, url:"/user/join"
-					, data:{"loginId":loginId, "password":password, "name":name, "email":email}
-					, success:function(data){
-						
-						if(data.result == "success"){
-							location.href = "/user/login-view";
-						}else{
-							alert("회원가입 실패!!")
-						}
-						
-					}
-					, error:function(){
-						alert("회원가입 에러!");
-					}
-				});
+//				$.ajax({
+//					type:"post"
+//					, url:"/user/join"
+//					, data:{"loginId":loginId, "password":password, "name":name, "email":email}
+//					, success:function(data){
+//						
+//						if(data.result == "success"){
+//							location.href = "/user/login-view";
+//						}else{
+//							alert("회원가입 실패!!")
+//						}
+//						
+//					}
+//					, error:function(){
+//						alert("회원가입 에러!");
+//					}
+//				});
 				
 			});
 			

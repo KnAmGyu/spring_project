@@ -12,6 +12,14 @@ import com.uilangage.memo.user.Service.UserService;
 @RestController
 public class UserController {
 
+		@Autowired
+		private UserService userService;
 		
+		@PostMapping("/join")
+		public Map<String, String> join(
+				@RequestParam("loginId") String loginId
+				, ){
+			
+		}
 		
 }
