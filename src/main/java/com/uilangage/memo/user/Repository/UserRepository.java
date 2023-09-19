@@ -9,7 +9,7 @@ import com.uilangage.memo.user.domain.User;
 public interface UserRepository  extends JpaRepository<User, Integer> {
 	
 	public User addUser(@Param()) {
-		
+		 
 	}
 	
 }
