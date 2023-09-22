@@ -12,6 +12,12 @@ header{
 .contents > .input-box {
 	width:400px;
 }
+
+.contents > .post-layout{
+	width:600px;
+	margin:0 auto;
+}
+
 footer{
 	height:70px;
 	background-color: #dddddd;
