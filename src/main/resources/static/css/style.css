@@ -18,6 +18,10 @@ header{
 	margin:0 auto;
 }
 
+.post-layout > textarea{
+	height:400px;
+}
+
 footer{
 	height:70px;
 	background-color: #dddddd;

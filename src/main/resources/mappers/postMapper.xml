@@ -12,13 +12,14 @@
 				`userId`
 				, `title`
 				, `content`
+				, `imagePath`
 			)
 		VALUE
 			(
 				#{userId}
 				, #{title}
 				, #{content}
-				
+				, #{imagePath}
 			)	
 	</insert>
 
@@ -29,6 +30,7 @@
 			,`userId`
 			, `title`
 			, `content`
+			, `imagePath`
 			, `createdAt`
 			, `updatedAt`
 		FROM
@@ -41,6 +43,24 @@
 				
 	
 	</select>
+
+	<select id="selectPost" parameterType="int"
+	resultType="com.uilangage.memo.post.domain.Post">
+		SELECT	
+			`id`
+			,`userId`
+			, `title`
+			, `content`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`post`
+		WHERE
+			`id` = #{id}		
+	
+	</select>
+
 
 
 </mapper>
