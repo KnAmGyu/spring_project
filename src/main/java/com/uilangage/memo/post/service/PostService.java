@@ -16,6 +16,26 @@ public class PostService {
 	@Autowired
 	private PostRepository postRepository;
 	
+	
+	public int deletePost(int postId, Integer userId){
+		
+		Post post = postRepository.selectPost(postId);
+		
+		if(userId == null ||post.getUserId() != userId) {
+			return 0;
+		}
+		
+		FileManager.removeFile(post.getImagePath());
+		
+		return postRepository.deletePost(postId);
+	}
+	
+	
+	public int updatePost(int postId, String title, String content) {
+		return postRepository.updatePost(postId, title, content);
+	}
+	
+	
 	public int addPost(int userId, String title, String content, MultipartFile file) {
 		
 		// file을 특정 디렉토리(폴더)에 저장하고, 
